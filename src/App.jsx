@@ -27,7 +27,6 @@ function App() {
         <Route path="/profile" element={<Profile />}/>
         <Route path="/createmuseum" element={<CreateMuseumPage />}/>
         <Route path="/*" element={<Error />}/>
-
       </Routes>
 
       <Footer/>

@@ -55,7 +55,7 @@ function SignupForm() {
         />
         <button 
         type="submit" 
-        className="p-2 m-2 border-1 border-2 border-black rounded-full hover:bg-blue-600 hover:text-white"
+        className="btn"
         >
         sign up
         </button>
