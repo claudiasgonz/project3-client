@@ -86,7 +86,7 @@ function MuseumProvider ({ children }) {
 
     return (
     <MuseumContext.Provider 
-    value={{ museums, createMuseum, updateMuseum, deleteMuseum }}> 
+    value={{ museums, createMuseum, updateMuseum, deleteMuseum, getAllMuseums }}> 
         {children}
     </MuseumContext.Provider>
     );

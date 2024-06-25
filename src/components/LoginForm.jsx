@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { Link } from "react-router-dom";
 
-function LoginForm() {
+function LoginForm() {p-10
     const [loginInfo, setLoginInfo] = useState({
         loginInfo:"",
         password: ""
@@ -16,7 +16,7 @@ function LoginForm() {
 
   return (
     <form 
-    className="center flex-col p-10 border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono"
+    className="center flex-col  border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono"
         onSubmit={(e) => {
         e.preventDefault();
         login(loginInfo);

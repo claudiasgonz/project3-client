@@ -6,11 +6,13 @@ import EditMuseumForm from "./EditMuseumForm";
 function MuseumDetailsCard({ museum }) {
   
   const [toggleEdit, setToggleEdit] = useState(false);
+  const [toggleAddReview, setToggleAddReview] = useState(false);
   const {deleteMuseum} = useContext(MuseumContext);
   const { user } = useContext(AuthContext);
 
   return (
     <div className="center flex-col border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono">
+
    <h1 className="font-mono text-center py-10 font-bold text-5xl">details</h1>
     <img 
         className="rounded-xl object-cover w-full h-64 p-5" 
@@ -70,17 +72,20 @@ function MuseumDetailsCard({ museum }) {
 
       {toggleEdit && (<EditMuseumForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
       )}
+
+      <h1 className="font-mono font-bold text-5xl py-10 ">
+      reviews
+      </h1>
+
+        {/* <button 
+        className="btn" 
+        onClick={() => setToggleAddReview(prev => !prev)}>
+        +
+        </button> */}
    </div>
+   
   );
 }
 
 
 export default MuseumDetailsCard;
-
-// {user && user.isAdmin && (
-//   <div className="center font-mono">
-//     <Link to="/museum/create" className="btn">
-//     create a museum
-//     </Link>
-//   </div>
-// )}
