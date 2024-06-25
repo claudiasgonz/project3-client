@@ -29,7 +29,7 @@ function MuseumDetails() {
     <ReviewForm/>
     )} 
 
-    {museum && museum.reviews.length ? (museum.reviews.map((review) => <ReviewCard review={review} />)
+    {museum && museum.reviews.length ? (museum.reviews.map((review) => <ReviewCard review={review} user={user}/>)
     ) : ( 
       <p className="font-mono">
       No reviews yet.

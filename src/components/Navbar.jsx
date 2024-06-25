@@ -39,12 +39,12 @@ function Navbar() {
             <button 
             className="btn" 
             onClick={logout}>
-            logout
+            log out
             </button>
           </div>
         ) : (
           <div className="center gap-5 p-5 font-mono">
-            <Link to="/login" className="links">login</Link>
+            <Link to="/login" className="links">log in</Link>
           </div>
         )}
 
