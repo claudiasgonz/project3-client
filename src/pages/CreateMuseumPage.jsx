@@ -10,6 +10,7 @@ function CreateMuseumPage() {
   useEffect(() => {
     user && user.isAdmin ? null : navigate("/");
   }, [user]);
+  
   return (
     <div className="center">
       <CreateMuseumForm />

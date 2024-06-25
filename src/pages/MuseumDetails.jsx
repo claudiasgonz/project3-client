@@ -5,7 +5,7 @@ import MuseumDetailsCard from "../components/MuseumDetailsCard";
 
 
 function MuseumDetails() {
-    const [museum, setMusem] = useState(null);
+    const [museum, setMuseum] = useState(null);
     const {museums} = useContext(MuseumContext);
     const {museumId} = useParams();
 
@@ -14,8 +14,7 @@ function MuseumDetails() {
     }, [museums]);
 
   return (
-    <div className="center flex flex-col items-center"> 
-    <h2 className="font-mono font-bold text-5xl">details</h2>
+    <div className="center flex flex-col items-center">
     {museum ? <MuseumDetailsCard museum={museum} /> : <p>Loading...</p>}
     </div>
   );
