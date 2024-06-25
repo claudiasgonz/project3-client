@@ -22,6 +22,14 @@ function Navbar() {
         </Link>
       </div>
 
+      {user && user.isAdmin && (
+        <div className="center font-mono">
+          <Link to="/museum/create" className="btn">
+          create a museum
+          </Link>
+        </div>
+      )}
+
         {user ? (
           <div className="center gap-5 p-5 font-mono">
             <button 

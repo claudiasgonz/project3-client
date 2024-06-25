@@ -11,11 +11,13 @@ import SignupPage from "./pages/SignupPage.jsx";
 import CreateMuseumPage from "./pages/CreateMuseumPage.jsx";
 import Profile from "./pages/Profile.jsx";
 import Error from "./pages/Error.jsx";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="app">
       <Navbar/>
+      <Toaster />
       
       <Routes>
         <Route path="/" element={<HomePage />}/>
@@ -25,7 +27,7 @@ function App() {
         <Route path="/login" element={<LoginPage  />}/>
         <Route path="/signup" element={<SignupPage />}/>
         <Route path="/profile" element={<Profile />}/>
-        <Route path="/createmuseum" element={<CreateMuseumPage />}/>
+        <Route path="/museum/create" element={<CreateMuseumPage />}/>
         <Route path="/*" element={<Error />}/>
       </Routes>
 
