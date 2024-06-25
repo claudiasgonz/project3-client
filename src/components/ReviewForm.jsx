@@ -5,11 +5,10 @@ import toast from "react-hot-toast";
 import api from "../services/api";
 import { MuseumContext } from "../context/museum.context";
 
+
 function ReviewForm() {
     const [review, setReview] = useState({title:"", rating: 0, review: ""})
-
     const { museumId } = useParams();
-    
     const { getAllMuseums } = useContext(MuseumContext);
 
     const handleChange = (e) => {

@@ -22,6 +22,15 @@ function ReviewCard({ review }) {
         <p className="font-mono text-right p-5 text-2 border-b-0 border-black">
        {review.review}
        </p>
+
+       {/* <p className="font-mono text-right p-5 text-2 border-b-0 border-black">
+            {new Date(review.createdAt).toLocaleString("en-US", {
+               year: "numeric",
+               month: "numeric",
+               day: "numeric", 
+            })}
+       </p> */}
+
         </div>
     </div>
   )

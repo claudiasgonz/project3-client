@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/auth.context";
 import { Link } from "react-router-dom";
 
-function LoginForm() {p-10
+function LoginForm() {
     const [loginInfo, setLoginInfo] = useState({
         loginInfo:"",
         password: ""
