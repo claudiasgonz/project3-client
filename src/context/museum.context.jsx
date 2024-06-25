@@ -19,10 +19,6 @@ function MuseumProvider ({ children }) {
         }
     };
 
-    useEffect(() => {
-        getAllMuseums();
-    }, []);
-
     const createMuseum = async (body) => {
         try {
             const response = await api.post("/museum", body);
@@ -59,12 +55,38 @@ function MuseumProvider ({ children }) {
             toast.error("Error updating this museum.")
             console.log(error)
         }
-    }
+    };
 
+    const deleteMuseum =  async (id) => {
+        try {
+            const confirmDelete = confirm("Are you sure you want to delete this museum?");
+
+            if (confirmDelete) {
+                const response = await api.delete("/museum/" + id);
+
+                if(response.status === 200) {
+                    toast.custom((t) => (
+                        <div className={`bg-green-100 border-l-4 border-green-500 text-green-700 p-4 font-mono ${t.visible ? 'animate-enter' : 'animate-leave'}`} style={{ transition: 'all 0.3s ease' }}>
+                            <p className="font-bold">museum deleted successfully.</p>
+                        </div>
+                    ));
+                    getAllMuseums();
+
+                    navigate(-1);
+                } 
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    };
+
+    useEffect(() => {
+        getAllMuseums();
+    }, []);
 
     return (
     <MuseumContext.Provider 
-    value={{ museums, createMuseum, updateMuseum }}> 
+    value={{ museums, createMuseum, updateMuseum, deleteMuseum }}> 
         {children}
     </MuseumContext.Provider>
     );

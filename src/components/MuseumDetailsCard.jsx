@@ -6,7 +6,8 @@ import EditMuseumForm from "./EditMuseumForm";
 function MuseumDetailsCard({ museum }) {
   
   const [toggleEdit, setToggleEdit] = useState(false);
-  
+  const {deleteMuseum} = useContext(MuseumContext);
+
   return (
     <div className="center flex-col border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono">
    <h1 className="font-mono text-center py-10 font-bold text-5xl">details</h1>
@@ -51,8 +52,17 @@ function MuseumDetailsCard({ museum }) {
        </div>
 
       <div className="p-5">
-        <button className="btn" 
-        onClick={() => setToggleEdit(prev => !prev)}>edit</button>
+        <button 
+        className="btn" 
+        onClick={() => setToggleEdit(prev => !prev)}>
+        edit
+        </button>
+
+        <button 
+        className="btn hover:bg-red-600" 
+        onClick={() => deleteMuseum(museum._id)}>
+        delete
+        </button>
       </div>
 
       {toggleEdit && (<EditMuseumForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
