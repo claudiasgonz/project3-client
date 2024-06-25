@@ -6,7 +6,6 @@ import EditMuseumForm from "./EditMuseumForm";
 function MuseumDetailsCard({ museum }) {
   
   const [toggleEdit, setToggleEdit] = useState(false);
-  const [toggleAddReview, setToggleAddReview] = useState(false);
   const {deleteMuseum} = useContext(MuseumContext);
   const { user } = useContext(AuthContext);
 

@@ -42,7 +42,7 @@ function ReviewForm() {
 
   return (
     <form 
-    className="center flex-col font-mono font-bold p-10"
+    className="center flex-col font-mono font-bold p-10 border-b-2 border-black"
     onSubmit={handleSubmit}
     >
 
@@ -79,7 +79,7 @@ function ReviewForm() {
 
     <button 
     type="submit" 
-    className="btn">
+    className="btn p-5">
     submit review
     </button>
     </form>
