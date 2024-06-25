@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -22,15 +22,15 @@ function App() {
     ) : (
        <Navigate to="/login" />
     );
-  }
+  };
 
   const IsNotLoggedIn = () => {
-    return localStorage.getItem("authToken") ? ( 
+    return !localStorage.getItem("authToken") ? ( 
       <Outlet/> 
     ) : (
-       <Navigate to="/login" />
+       <Navigate to="/" />
     );
-  }
+  };
 
   return (
     <div className="app">
@@ -48,8 +48,6 @@ function App() {
         <Route path="/login" element={<LoginPage  />}/>
         <Route path="/signup" element={<SignupPage />}/>
       </Route>
-
-
 
         <Route path="/museum/create" element={<CreateMuseumPage />}/>
         <Route path="/*" element={<Error />}/>

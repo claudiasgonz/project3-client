@@ -7,6 +7,7 @@ function MuseumDetailsCard({ museum }) {
   
   const [toggleEdit, setToggleEdit] = useState(false);
   const {deleteMuseum} = useContext(MuseumContext);
+  const { user } = useContext(AuthContext);
 
   return (
     <div className="center flex-col border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono">
@@ -51,6 +52,7 @@ function MuseumDetailsCard({ museum }) {
        </p>
        </div>
 
+      {user && user.isAdmin && (
       <div className="p-5">
         <button 
         className="btn" 
@@ -64,6 +66,7 @@ function MuseumDetailsCard({ museum }) {
         delete
         </button>
       </div>
+    )}
 
       {toggleEdit && (<EditMuseumForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
       )}
@@ -73,3 +76,11 @@ function MuseumDetailsCard({ museum }) {
 
 
 export default MuseumDetailsCard;
+
+// {user && user.isAdmin && (
+//   <div className="center font-mono">
+//     <Link to="/museum/create" className="btn">
+//     create a museum
+//     </Link>
+//   </div>
+// )}
