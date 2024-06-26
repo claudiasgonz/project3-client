@@ -42,6 +42,9 @@ function Profile() {
         profilePic={user.profilePic}
         _id={user._id}
       />
+
+      <p className="font-mono text-left font-bold text-2 text-3xl border-l-2 border-r-2 mx-2 border-b-2 border-black pt-10 p-5">my reviews</p>
+
       {user.reviews.map((review) => (
         <div
           className="center flex-col border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono"
