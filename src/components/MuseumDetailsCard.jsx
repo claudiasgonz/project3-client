@@ -56,7 +56,7 @@ function MuseumDetailsCard({ museum }) {
        </div>
 
       {user && user.isAdmin && (
-      <div className="p-5">
+      <div className="p-5 font-mono content-center">
         <button 
         className="btn" 
         onClick={() => setToggleEdit(prev => !prev)}>
@@ -74,7 +74,7 @@ function MuseumDetailsCard({ museum }) {
       {toggleEdit && (<EditMuseumForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
       )}
 
-      <h1 className="font-mono font-bold text-5xl pl-10 pt-10 border-black ">
+      <h1 className="font-mono font-bold text-5xl pl-10 pt-10 border-black border-t-2">
       reviews
       </h1>
 
