@@ -12,7 +12,7 @@ function MuseumDetailsCard({ museum }) {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="center flex-col border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono">
+  <div className="mx-2 border-l-2 border-r-2 border-black">
 
    <h1 className="font-mono text-center py-10 font-bold text-5xl">details</h1>
     <img 
@@ -74,7 +74,7 @@ function MuseumDetailsCard({ museum }) {
       {toggleEdit && (<EditMuseumForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
       )}
 
-      <h1 className="font-mono font-bold text-5xl py-10 border-black ">
+      <h1 className="font-mono font-bold text-5xl pl-10 pt-10 border-black ">
       reviews
       </h1>
 

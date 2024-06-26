@@ -80,7 +80,7 @@ function ReviewForm() {
 
     <button 
     type="submit" 
-    className="btn pt-5 pb-2 px-4 mt-4">
+    className="btn pt-5 pb-2 px-4">
     submit review
     </button>
     </form>
