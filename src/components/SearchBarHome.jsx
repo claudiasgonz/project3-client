@@ -38,11 +38,20 @@ function SearchBarHome() {
 
   return (
     <div className="p-10 border-b-2 border-black font-mono">
-      <Select 
+      <div>
+        <h1 className="font-mono text-left pb-5 font-bold text-2">
+        search<br></br>
+        </h1>
+
+        <Select 
         options={options}
         onChange={handleSelect}
-        placeholder="search for a museum by name or location"
+        placeholder="by museum name or location..."
       />
+        <h1 className="font-mono text-right pt-5 font-bold text-2">
+        our museum list<br></br>
+        </h1>
+      </div>
     </div>
   )
 }

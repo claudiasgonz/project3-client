@@ -6,6 +6,7 @@ import ReviewForm from "../components/ReviewForm";
 import ReviewCard from "../components/ReviewCard";
 import { AuthContext } from "../context/auth.context";
 import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 function MuseumDetails() {
     const [museum, setMuseum] = useState(null);
@@ -20,6 +21,15 @@ function MuseumDetails() {
 
   return (
     <div>
+      <div className="border-l-2 border-r-2 border-black mx-2 p-5">
+        <Link
+        to="/museums"
+        className="btn">
+        ←
+        </Link>
+      </div>
+
+
     {museum ? <MuseumDetailsCard museum={museum} /> : <p>Loading...</p>}
     
     {!user || user.isAdmin ? (

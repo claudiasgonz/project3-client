@@ -5,7 +5,7 @@ import { AuthContext } from "../context/auth.context";
 function Navbar() {
     const { user, logout } = useContext(AuthContext);
   return (
-    <nav className="flex justify-between border-2 border-black m-2 mb-0">
+    <nav className="flex flex-wrap items center justify-between border-2 border-black m-2 mb-0">
 
       <div className="center gap-5 pt-5 pr-5 pb-5 pl-5 font-mono">
 

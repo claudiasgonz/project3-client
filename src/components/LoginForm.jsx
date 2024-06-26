@@ -48,7 +48,7 @@ function LoginForm() {
         log in
         </button>
 
-        <p className="mt-4">
+        <p className="mt-4 pb-10">
                 don't have an account yet? 
                 <br></br>
                 <Link to="/signup" className="text-blue-600 hover:underline">
