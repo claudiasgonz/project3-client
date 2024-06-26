@@ -31,7 +31,7 @@ function AuthProvider({ children }) {
         setUser(response.data.user);
         setLoggedIn(true);
         localStorage.setItem("authToken", response.data.authToken);
-        navigate("/profile");
+        navigate(`/user/${response.data.user._id}`);
       }
     } catch (error) {
       setUser(null);

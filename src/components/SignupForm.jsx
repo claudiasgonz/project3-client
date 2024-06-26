@@ -7,6 +7,7 @@ function SignupForm() {
     const [signupInfo, setSignupInfo] = useState({
         email: "",
         username: "",
+        profilePic: "",
         password: ""
     });
 
@@ -42,6 +43,16 @@ function SignupForm() {
             value={signupInfo.username} 
             onChange={handleChange}
             placeholder="username"
+            className="border border-black py-2 mb-2"
+        />
+        
+        <label htmlFor="profilePic">profile picture</label>
+        <input 
+            type="text" 
+            name="profilePic" 
+            value={signupInfo.profilePic} 
+            onChange={handleChange}
+            placeholder="enter image url"
             className="border border-black py-2 mb-2"
         />
 

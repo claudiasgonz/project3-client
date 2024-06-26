@@ -42,7 +42,7 @@ function App() {
         <Route path="/about" element={<About />}/>
         <Route path="/museums" element={<MuseumList />}/>
         <Route path="/museums/:museumId" element={<MuseumDetails />}/>
-        <Route path="/profile/:userId" element={<Profile />}/>
+        <Route path="/user/:userId" element={<Profile />}/>
 
       <Route element={<IsNotLoggedIn />}>
         <Route path="/login" element={<LoginPage  />}/>

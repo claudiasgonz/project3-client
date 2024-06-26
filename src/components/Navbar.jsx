@@ -32,7 +32,7 @@ function Navbar() {
 
         {user ? (
           <div className="center gap-5 p-5 font-mono">
-            <Link to="/profile/:">
+            <Link to={`/user/${user._id}`}>
             <button 
             className="btn">
             profile
