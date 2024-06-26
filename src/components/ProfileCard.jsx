@@ -18,9 +18,10 @@ function ProfileCard({
                 />
         
             <div className="leading-normal font-mono text-sm">
-            <p className="text-right">
+                <p className="text-right">
                 profile<br></br>
                 </p>
+
                 <p className="font-mono text-right pb-3 font-bold text-4xl">
                 {username}
                 </p>

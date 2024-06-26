@@ -1,3 +1,4 @@
+import SearchBarHome from "../components/SearchBarHome";
 
 
 function HomePage() {
@@ -6,6 +7,8 @@ function HomePage() {
       <h1 className="font-mono text-center py-10 font-bold text-5xl border-b-2 border-black">
       museo
       </h1>
+
+      <SearchBarHome />
 
       <div>
         <h1 className="font-mono text-left p-10 font-bold text-2">

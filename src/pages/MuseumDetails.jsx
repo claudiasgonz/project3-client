@@ -43,7 +43,7 @@ function MuseumDetails() {
           <ReviewCard key={review._id} review={review} user={user} />
         ))
       ) : (
-        <p className="font-mono">No reviews yet.</p>
+        <p className="font-mono center border-black border-l-2 border-r-2 mx-2">no reviews yet. ☹ <br></br>be the first to leave a review ☺ </p>
       )}
     </div>
   );
