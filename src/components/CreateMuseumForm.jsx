@@ -17,12 +17,15 @@ function CreateMuseumForm() {
     };
 
   return (
+    <div className="border-l-2 border-r-2 border-b-2 border-black mx-2">
+    
     <form 
     onSubmit={(e) => {
        e.preventDefault();
        createMuseum(museumInfo);
     }}
-    className="center flex-col  border-2 border-t-0 mb-0 ml-2 mr-2 border-black font-mono">
+    className="center flex-col font-mono p-10 mx-2">
+
         <h1 className="font-mono text-center py-10 font-bold text-5xl">create a museum</h1>
 
         <label htmlFor="name">name</label>
@@ -83,6 +86,7 @@ function CreateMuseumForm() {
         create museum
         </button>
     </form>
+    </div>
   );
 }
 

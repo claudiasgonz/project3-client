@@ -18,11 +18,11 @@ function MuseumDetails() {
     }, [museums]);
 
   return (
-    <div className="center flex flex-col items-center">
+    <div>
     {museum ? <MuseumDetailsCard museum={museum} /> : <p>Loading...</p>}
     {!user || user.isAdmin ? (
     
-    <p className="font-mono font-bold p-5 border-x-2 border-b-2 border-black"> 
+    <p className="font-mono font-bold p-5 border-x-2 mx-2 border-b-2 border-black center"> 
     <Link to="/login" className="btn">log in to review</Link>
     </p> 
     ) : ( 

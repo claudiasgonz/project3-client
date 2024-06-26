@@ -49,15 +49,23 @@ function ReviewCard({ review, user }) {
        {review.review}
        </p>
 
-       {/* <p className="font-mono text-right p-5 text-2 border-b-0 border-black">
+       <p className="font-mono text-right p-5 text-2 border-b-0 border-black">
             {new Date(review.createdAt).toLocaleString("en-US", {
                year: "numeric",
                month: "numeric",
                day: "numeric", 
             })}
-       </p> */}
-       {user && user._id === review.creator._id &&  
-       <button className="btn" onClick={() => handleDelete(review._id)}>delete</button>}
+       </p>
+
+       {user && user._id === review.creator._id && 
+        <div className="flex justify-end p-5">
+            <button 
+            className="btn" 
+            onClick={() => handleDelete(review._id)}>
+            delete
+            </button>
+        </div>
+        }
         </div>
     </div>
   )

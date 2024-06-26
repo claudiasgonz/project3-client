@@ -12,7 +12,7 @@ function CreateMuseumPage() {
   }, [user]);
   
   return (
-    <div className="center">
+    <div>
       <CreateMuseumForm />
     </div>
   );
