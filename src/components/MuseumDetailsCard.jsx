@@ -2,10 +2,12 @@ import { useContext, useState } from "react";
 import { MuseumContext } from "../context/museum.context";
 import { AuthContext } from "../context/auth.context";
 import EditMuseumForm from "./EditMuseumForm";
+import ReviewForm from "./ReviewForm";
 
 function MuseumDetailsCard({ museum }) {
   
   const [toggleEdit, setToggleEdit] = useState(false);
+  const [toggleAddReview, setToggleAddReview] = useState(false);
   const {deleteMuseum} = useContext(MuseumContext);
   const { user } = useContext(AuthContext);
 
@@ -48,7 +50,7 @@ function MuseumDetailsCard({ museum }) {
        <p className="p-5">
        website<br></br>
        </p>
-        <p className="font-mono text-right p-10 font-bold text-2">
+        <p className="font-mono text-right p-10 font-bold text-2 border-b-2 border-black">
        {museum.website}
        </p>
        </div>
@@ -72,15 +74,19 @@ function MuseumDetailsCard({ museum }) {
       {toggleEdit && (<EditMuseumForm toggleEdit={toggleEdit} setToggleEdit={setToggleEdit} />
       )}
 
-      <h1 className="font-mono font-bold text-5xl py-10 ">
+      <h1 className="font-mono font-bold text-5xl py-10 border-black ">
       reviews
       </h1>
 
-        {/* <button 
-        className="btn" 
-        onClick={() => setToggleAddReview(prev => !prev)}>
-        +
-        </button> */}
+      {/* <button
+        className="btn"
+        onClick={() => setToggleAddReview((prev) => !prev)}
+      >
+        {toggleAddReview ? "hide form" : "+"}
+      </button>
+
+      {toggleAddReview && <ReviewForm />} */}
+
    </div>
    
   );

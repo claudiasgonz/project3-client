@@ -41,11 +41,11 @@ function ReviewForm() {
 
   return (
     <form 
-    className="center flex-col font-mono font-bold p-10 border-2 border-t-0 mx-2 border-black"
+    className="center flex-col font-mono font-bold p-10"
     onSubmit={handleSubmit}
     >
 
-<h1 className="font-mono text-center py-10 font-bold text-4xl">add a review</h1>
+<h1 className="font-mono text-center font-bold text-4xl pb-5">add a review</h1>
 
     <label htmlFor="title">title</label>
     <input 
@@ -80,7 +80,7 @@ function ReviewForm() {
 
     <button 
     type="submit" 
-    className="btn p-5">
+    className="btn pt-5 pb-2 px-4 mt-4">
     submit review
     </button>
     </form>

@@ -32,10 +32,13 @@ function Navbar() {
 
         {user ? (
           <div className="center gap-5 p-5 font-mono">
+            <Link to="/profile/:">
             <button 
             className="btn">
             profile
             </button>
+            </Link>
+
             <button 
             className="btn" 
             onClick={logout}>

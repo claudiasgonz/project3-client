@@ -8,7 +8,7 @@ function MuseumCard({
     _id
 }) {
   return (
-    <div className="max-w-sm font-mono text-right p-5 font-bold text-2 border-b-2 borderborder-b-black border-x-2 border-y-2 border-x-white border-y-white">
+    <div className="max-w-sm font-mono text-right p-5 font-bold text-2 border-b-2 border-b-black border-x-2 border-y-2 border-x-white border-y-white">
     
     <div>
             <img
