@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div className="border-l-2 border-r-2 border-black mx-2">
       <h1 className="font-mono text-center py-10 font-bold text-5xl border-b-2 border-black">
-      museo
+      muse.io
       </h1>
 
       <SearchBarHome />
