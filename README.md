@@ -1,8 +1,7 @@
-# React + Vite
+MUSE.IO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Muse.io is a single-page application (SPA) built with React, enabling users to explore museums and their details. The app features user authentication with encrypted passwords, allowing users to create accounts, log in, add reviews to museums, and delete their reviews.
 
-Currently, two official plugins are available:
+Admins have the capability to manage museum entries by creating, editing, and deleting them. The backend, developed with ExpressJS, MongoDB, and Mongoose, provides a REST API with routes for CRUD actions across three database models: users, museums, and reviews. The app includes backend validation, centralized error handling, and is styled using Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was created as part of Ironhacks Web Dev Bootcamp. June 2024
